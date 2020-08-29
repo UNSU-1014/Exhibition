@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    
+    <link rel="stylesheet" href="{{url_for('static',filename='main.css')}}">
+
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <!-- 오른쪽 메뉴바 -->
+            <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#nav_menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span> 
+                <span class="icon-bar"></span> 
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <span>HOME</span>
+            </a>
+            </div>
+        <div class="collapse navbar-collapse" id="nav_menu">
+            <ul class="nav navbar-nav">
+                <li class="nav-txt">
+                    <a href="#result">RESULT</a>
+                </li>
+                <li class="nav-txt">
+                    <a href="/contact">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <section class="section1">
+        <div class="bg"></div>
+        <div class="txt">
+            <h1>날씨에 따른 범죄율 예측하기</h1>
+            <p>현재 위치를 선택하면, 범죄율을 예측할 수 있습니다.</p>
+        </div>
+        
+        <div class="w_img">
+            <img src="{{url_for('static',filename='media/weather_color.png')}}">
+        </div>
+        <div class="arrow">
+            <p>▼</p>
+        </div>
+        <div class="result" id="result">
+            <div class="reult-title"><h2>지역을 입력(선택)해주세요</h2></div>
+        </div>
+        <box class="box">
+            <div class="box1">
+                <!-- 다른 지역들도 가져와야하는디.. -->
+                <p>지역선택(시)</p> 
+                <input list="city" id="city_id">
+                <datalist id="city">
+                    <!-- main.js [44] "지역 db 가져오기 -> 도시 datalist 초기화" 에서 대체 -->
+                    <!-- <option value="서울">서울</option>
+                    <option value="대구">대구</option>
+                    <option value="광주">광주</option> -->
+                </datalist>
+            </div>
+            <div class="box2">
+                <p>지역선택(구)</p>
+                <input list="local" id="local_id">
+                <datalist id="local">
+                        <!-- main.js [44] "지역 db 가져오기 -> 도시 datalist 초기화" 에서 대체 -->
+                        <!-- <option value="강남구">강남구</option>
+                        <option value="관악구">관악구</option>
+                        <option value="구로구">구로구</option>
+                        <option value="금천구">금천구</option> -->
+                    </datalist>
+            </div>
+        </box>
+        <div>
+            <div class="section__item start">
+                <div id="btn-get-data" class="sm-link sm-link_padding-all sm-link5">
+                    <span class="sm-link__label">&nbsp;&nbsp;&nbsp;START&nbsp;&nbsp;&nbsp;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 그래프를 보여주는 곳 -->
+    <section>
+        <div class="row" id="wrap-myChart">
+            <canvas id="myChart">
+
+            </canvas>
+        </div>
+    </section>
+
+</body>
+
+<script src="{{url_for('static',filename='main.js')}}"></script>
+<script src="{{url_for('static',filename='chart_style.js')}}"></script>
+
+</html>

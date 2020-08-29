@@ -1,0 +1,217 @@
+@font-face {
+    font-family: 'MapoGoldenPier';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoGoldenPierA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal; }
+/* 완성하면 주석 없애기 */
+ body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+ }
+.bg{
+    width:100%;
+    position: absolute; 
+    top:60px;
+}
+.navbar{
+  width: 100%;
+  box-shadow: 0 0 20px -2px rgba(0, 0, 0, 1);
+  background-color: #ffffff;
+  border: none;
+}
+.navbar-toggle{
+    background: linear-gradient(to right, #1F4386, #268EA4, #5FC3B1);
+  border: none;
+}
+.navbar-nav{
+  float: right;
+}
+.navbar-brand{
+    display: inline-block;
+    font-size: x-large;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+  }
+.navbar-brand span {
+    background: linear-gradient(to right,  #1F4386, #268EA4, #5FC3B1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+.navbar-brand:hover {
+    background: linear-gradient(to right,  #1F4386, #268EA4, #5FC3B1);
+}  
+.navbar-brand:hover span {
+    background: none;
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+}
+.nav-txt{
+    font-size: medium;
+    text-align: center;
+    margin-right: 10px;
+    color: rgb(92, 92, 92);
+}
+.nav-txt a{
+    color: rgb(92, 92, 92);
+}
+.icon-bar{
+    background-color: white;
+}
+section{
+    display:block;
+    width:100%;
+    height:450px;
+    color:#ffffff;
+    text-align: center;
+    padding-top:90px;
+}
+.section1{
+    margin-top: 5%;
+}
+.intro{
+    width: 43%;
+    position: absolute;
+    left: 8%;
+    margin-right: 1%;
+}
+.p_title{
+    font-size: 1.5em;
+    margin-top: 10%;
+    text-align: center;
+    color: #1F4386;
+}
+.p_content{
+    margin-top: 7%;
+    text-align: left;
+    color: #268EA4;
+}
+.p_content2{
+    margin-top: 10%;
+    text-align: left;
+    color: white;
+}
+.s_div{
+    position: absolute;
+    left: 50%;
+    width: 37%;
+    height: 500px;
+    margin: auto;
+    margin-left: 3%;
+    background-color: white;
+    box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 3);
+    box-sizing: border-box;
+    display: inline-block;
+    
+    border-style: solid;
+
+    transition-duration: .5s;
+    /* border-image: linear-gradient(to right,#F4505F, #CA6DDB, #1ABEE8);
+    border-image-slice: 1;
+    background: white;
+    border-image-width: 10px; */
+
+    /* background: linear-gradient( to right, #F4505F, #CA6DDB, #1ABEE8 ); */
+}
+.s_div:hover{
+    left: 49.5%;
+    width: 38%;
+    height: 505px;
+}
+.f_div{
+    width: 100%;
+    height: 400px;
+    margin: auto;
+    background: linear-gradient( to right,  #1F4386, #268EA4, #5FC3B1 );
+}
+h1{
+    color: black;
+    font-weight: bold;
+    font-size: 3em;
+}
+p{
+    margin-top: 0.7em;
+    color: black;
+    font-weight:bold;
+    font-size: 1.3em;
+}
+.form-group{
+    text-align: left;
+    margin: 3%;
+    padding: 5%;
+    color: black;
+}
+label{
+    text-align: left;
+}
+.username, .usermail, .message{
+    background-color: white;
+    margin-left: 10%;
+    /* border: black; */
+    width: 80%;
+    padding-left: 1.1em;
+
+    border-image: linear-gradient(to right, #1F4386, #268EA4, #5FC3B1);
+    border-image-slice: 1;
+    background: white;
+    border-image-width: 5px;
+}
+.username, .usermail{
+    height: 40px;
+}
+textarea{
+    resize: none;
+    padding-top: 1em;
+}
+.btn{
+    font-size: 1em;
+    margin-left: 20%;
+    height: 40px;
+    width: 60%;
+    color: white;
+    border: none;
+    background: linear-gradient(to right,  #1F4386, #268EA4, #5FC3B1);
+    box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 3);
+
+    transition-duration: 0.5s;
+}
+.btn:hover{
+    width: 80%;
+    color: white;
+    height: 48px;
+    margin-left: 10%;
+}
+.btn:active{
+    width: 84%;
+    color: white;
+    height: 52px;
+    margin-left: 8%;
+    border: none;
+    background: linear-gradient(to left,  #1F4386, #268EA4, #5FC3B1);
+    box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 3);
+}
+textarea:focus, input[type=text]:focus,input[type=email]:focus{
+    background-color: rgb(218, 231, 255);
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+@media all and (max-width:768px){
+    .s_div{
+        width: 80%;
+        left: 8%;
+    }
+    .s_div:hover{
+        left: 7.5%;
+        width: 81%;
+        height: 505px;
+    }
+    .intro{
+        visibility: hidden;
+    }
+}
+
+
+

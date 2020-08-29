@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="{{url_for('static',filename='contact.css')}}">
+
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <!-- 오른쪽 메뉴바 -->
+            <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#nav_menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span> 
+                <span class="icon-bar"></span> 
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <span>HOME</span>
+            </a>
+            </div>
+        <div class="collapse navbar-collapse" id="nav_menu">
+            <ul class="nav navbar-nav">
+                <li class="nav-txt">
+                    <a href="/">RESULT</a>
+                </li>
+                <li class="nav-txt">
+                    <a href="/contact">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <section>
+        <h1>CONTACT</h1>
+        <div class="section1">
+            <div class="intro">
+                <p class="p_title">오목교 사람들</p>
+                <p class="p_content">
+                    오목교 사람들은 광운대학교 '참빛 설계' 프로젝트 팀 입니다.<br>
+                    날씨와 범죄의 상관관계를 분석한 후, 날씨에 따른 범죄율 예측 서비스를 만들었습니다.<br><br>
+                </p>
+                <p class="p_content2">
+                    팀장 : 이정환<br>
+                    팀원 : 강희지, 이유련, 장은수
+                </p>
+            </div>
+            <div class="s_div">
+                <p>SAY SOMETHING</p>
+                <!-- form 태그 추가 -->
+                <form action="/contact", method="POST">
+                    <div class="form-group">
+                        <label for="userid">NAME</label><br>
+                        <input type="text" class="username" placeholder="name" id="c_name", name="c_name"><br><br>
+                    
+                        <label for="email">E-MAIL</label><br>
+                        <input type="email" class="usermail" placeholder="@email.com" id="c_email", name="c_email"><br><br>
+                
+                        <label for="message">MESSAGE</label><br>
+                                
+                        <textarea class="message" cols="20" rows="5" placeholder="Please write down your feedback." id="c_text", name="c_text"></textarea>
+                        <br><br>
+
+                        <div class="send-btn">
+                            <!-- type을 button에서 submit으로 대체 -->
+                            <button type="submit" class="btn" onclick="alert('전송되었습니다.')" id="c_send_btn"><span>SEND</span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="f_div">
+    
+        </div>
+    </footer>
+</body>
+<script src="{{url_for('static',filename='contact.js')}}"></script>
+</html>
